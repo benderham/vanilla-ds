@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { dark } from './theme-dark.css';
 import { light } from './theme-light.css';

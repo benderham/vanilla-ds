@@ -1,8 +1,8 @@
+import type { ConditionalValue } from '@vanilla-extract/sprinkles';
 import {
   createMapValueFn,
   createNormalizeValueFn,
   createSprinkles,
-  ConditionalValue,
   defineProperties,
 } from '@vanilla-extract/sprinkles';
 

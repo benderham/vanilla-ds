@@ -1,22 +1,26 @@
-const {
-  mergeConfig
-} = require('vite');
+const { mergeConfig } = require('vite');
+
 module.exports = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions', '@storybook/addon-mdx-gfm'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-mdx-gfm',
+  ],
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
   features: {
-    storyStoreV7: true
+    storyStoreV7: true,
   },
   async viteFinal(config) {
     return mergeConfig(config, {
-      plugins: [require('@vanilla-extract/vite-plugin').vanillaExtractPlugin()]
+      plugins: [require('@vanilla-extract/vite-plugin').vanillaExtractPlugin()],
     });
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };

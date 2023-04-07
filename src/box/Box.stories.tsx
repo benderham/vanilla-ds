@@ -1,6 +1,7 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { Box, BoxProps } from './Box';
+import type { BoxProps } from './Box';
+import { Box } from './Box';
 
 export default {
   title: 'Layout/Box',
@@ -20,11 +21,7 @@ export const Default = {
   args: {
     children: 'Box Component',
   },
-  render: (args) => (
-    <Box
-      {...args}
-    />
-  ),
+  render: (args) => <Box {...args} />,
 } satisfies StoryObj<BoxProps<'div'>>;
 
 export const AsSpanComponent = {
@@ -33,22 +30,14 @@ export const AsSpanComponent = {
     children: 'Box as a Span Component',
   },
   render: (args) => (
-    <Box
-      {...args}
-      color="regularHighContrast"
-      background="accent"
-    />
+    <Box {...args} color="regularHighContrast" background="accent" />
   ),
 } satisfies StoryObj<BoxProps<'span'>>;
 
 export const WithAriaLabel = {
   args: {
-    "aria-label": 'Box',
+    'aria-label': 'Box',
     children: 'Box Component w/Aria Label',
   },
-  render: (args) => (
-    <Box
-      {...args}
-    />
-  ),
+  render: (args) => <Box {...args} />,
 } satisfies StoryObj<BoxProps<'div'>>;

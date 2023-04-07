@@ -1,12 +1,11 @@
-import {
+import type {
   ComponentPropsWithoutRef,
   ElementType,
-  ReactNode,
   PropsWithChildren,
 } from 'react';
 
-import { Prettify } from '../utils';
-import { sprinkles, Sprinkles } from '../style/sprinkles.css';
+import type { Sprinkles } from '../style/sprinkles.css';
+import { sprinkles } from '../style/sprinkles.css';
 
 export type BoxProps<T extends ElementType> = {
   component?: T;

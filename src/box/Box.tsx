@@ -36,7 +36,7 @@ export const Box = <T extends ElementType = 'div'>({
   children,
   ...restProps
 }: Props<T>) => {
-  // sprinkles is only for props that we want to have set values for...
+  // sprinkles is only for props that we want to have set values (e.g. tokens) for...
 
   const ElementType = component || 'div';
 

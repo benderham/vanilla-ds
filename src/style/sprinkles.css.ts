@@ -29,7 +29,8 @@ const responsiveProperties = defineProperties({
     // Animation
 
     // Box Model (Outside In)
-
+    margin: vars.space,
+    padding: vars.space,
     // Typography
   },
 });

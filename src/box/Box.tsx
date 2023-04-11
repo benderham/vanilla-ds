@@ -30,14 +30,30 @@ export const Box = <T extends ElementType = 'div'>({
   flexShrink,
   flexGrow,
   gap,
+  display,
+  margin,
+  // boxShadow,
+  // borderStyle,
+  // borderWidth,
+  borderRadius,
   borderColor,
+  // width,
+  // height,
+  padding,
   background,
+  fontSize,
+  // lineHeight,
+  // fontFamily,
+  // fontWeight,
+  // fontStyle,
+  // textAlign,
+  // textTransform,
   color,
+  pointerEvents,
+  cursor,
   children,
   ...restProps
 }: Props<T>) => {
-  // sprinkles is only for props that we want to have set values (e.g. tokens) for...
-
   const ElementType = component || 'div';
 
   return (
@@ -56,9 +72,15 @@ export const Box = <T extends ElementType = 'div'>({
         flexShrink,
         flexGrow,
         gap,
+        display,
+        margin,
+        borderRadius,
         borderColor,
+        padding,
         background,
         color,
+        pointerEvents,
+        cursor,
       })}
       {...restProps}
     >

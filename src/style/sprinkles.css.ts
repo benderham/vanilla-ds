@@ -23,15 +23,27 @@ const responsiveProperties = defineProperties({
     flexDirection: ['row', 'column', 'row-reverse', 'column-reverse'],
     gap: vars.space,
     // Display & Visibility
-
+    display: [
+      'block',
+      'inline',
+      'inline-block',
+      'flex',
+      'inline-flex',
+      'grid',
+      'inline-grid',
+      'none',
+    ],
     // Clipping
 
     // Animation
 
     // Box Model (Outside In)
     margin: vars.space,
+
     padding: vars.space,
     // Typography
+
+    pointerEvents: ['none', 'auto'],
   },
 });
 
@@ -65,7 +77,6 @@ const unresponsiveProperties = defineProperties({
     flexWrap: ['wrap', 'nowrap', 'wrap-reverse'],
     flexShrink: [0],
     flexGrow: [0, 1],
-
     // Display & Visibility
 
     // Clipping
@@ -73,10 +84,7 @@ const unresponsiveProperties = defineProperties({
     // Animation
 
     // Box Model (Outside In)
-    // borderRadius: vars.border.radius,
-    // width: { full: '100%' },
-
-    // Background
+    borderRadius: vars.border.radius,
 
     // Typography
 

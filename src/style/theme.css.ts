@@ -2,6 +2,7 @@ import { createGlobalTheme, createThemeContract } from '@vanilla-extract/css';
 
 /** Used as the base value for calculating space. */
 const grid = 4;
+const px = (value: number | string) => `${value}px`;
 const pxToRem = (value: number) => `${value / 16}rem`;
 
 const spaceVars = {
@@ -15,6 +16,23 @@ const spaceVars = {
 };
 
 export const root = createGlobalTheme(':root', {
+  border: {
+    radius: {
+      small: pxToRem(grid / 2),
+      medium: pxToRem(grid),
+      large: pxToRem(grid * 2),
+      full: px(9999),
+    },
+    width: {
+      default: px(1),
+    },
+  },
+
+  fonts: {
+    heading: 'Georgia, Times, Times New Roman, serif',
+    body: 'system-ui',
+  },
+
   space: {
     none: '0',
     'inset-xxsmall': `${spaceVars.xxsmall} ${spaceVars.xxsmall} ${spaceVars.xxsmall} ${spaceVars.xxsmall}`,
@@ -55,11 +73,6 @@ export const root = createGlobalTheme(':root', {
     'squash-large': `${spaceVars.large} ${spaceVars.medium} ${spaceVars.large} ${spaceVars.medium}`,
     'squash-xlarge': `${spaceVars.xlarge} ${spaceVars.large} ${spaceVars.xlarge} ${spaceVars.large}`,
     'squash-xxlarge': `${spaceVars.xxlarge} ${spaceVars.xlarge} ${spaceVars.xxlarge} ${spaceVars.xlarge}`,
-  },
-
-  fonts: {
-    heading: 'Georgia, Times, Times New Roman, serif',
-    body: 'system-ui',
   },
 });
 
